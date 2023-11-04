@@ -1,4 +1,4 @@
-package htw.berlin.webtech;
+package htw.berlin.webtech.Exceptions;
 
 public class PasswordNotFoundException extends RuntimeException {
 

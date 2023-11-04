@@ -1,4 +1,4 @@
-package htw.berlin.webtech;
+package htw.berlin.webtech.Exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
