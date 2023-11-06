@@ -58,10 +58,13 @@ public class PasswordManagerController {
     public ResponseEntity<Password> updatePassword(@PathVariable Long id, @RequestBody Password passwordDetails) {
         try {
             Password existingPassword = passwordService.get(id);
+            // Encrypt the username and description before updating
+            String encryptedUsername = EncryptionUtils.encrypt(passwordDetails.getUsername());
+            String encryptedDescription = EncryptionUtils.encrypt(passwordDetails.getDescription());
             existingPassword.setService(passwordDetails.getService());
-            existingPassword.setUsername(passwordDetails.getUsername());
-            existingPassword.setPassword(passwordDetails.getPassword());
-            existingPassword.setDescription(passwordDetails.getDescription());
+            existingPassword.setUsername(encryptedUsername); // Set encrypted username
+            existingPassword.setPassword(passwordDetails.getPassword()); // Set password to encrypt in service
+            existingPassword.setDescription(encryptedDescription); // Set encrypted description
             Password updatedPassword = passwordService.save(existingPassword);
             return ResponseEntity.ok(updatedPassword);
         } catch (PasswordNotFoundException ex) {
