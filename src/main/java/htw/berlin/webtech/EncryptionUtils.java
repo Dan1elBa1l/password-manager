@@ -6,7 +6,7 @@ import java.security.Key;
 import java.util.Base64;
 
 public class EncryptionUtils {
-
+/*
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
     private static final String KEY = System.getenv("ENCRYPTION_KEY"); // Die Umgebungsvariable für den Schlüssel
@@ -31,4 +31,6 @@ public class EncryptionUtils {
         byte[] decryptedBytes = Base64.getDecoder().decode(dataToDecrypt);
         return new String(cipher.doFinal(decryptedBytes));
     }
+
+ */
 }
