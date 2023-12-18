@@ -1,6 +1,8 @@
-package htw.berlin.webtech;
+package htw.berlin.webtech.Password;
 
 import htw.berlin.webtech.Exceptions.PasswordNotFoundException;
+import htw.berlin.webtech.Password.Password;
+import htw.berlin.webtech.Password.PasswordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

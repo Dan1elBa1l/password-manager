@@ -1,5 +1,7 @@
-package htw.berlin.webtech;
+package htw.berlin.webtech.CreditCard;
 
+import htw.berlin.webtech.CreditCard.CreditCard;
+import htw.berlin.webtech.CreditCard.CreditCardRepository;
 import htw.berlin.webtech.Exceptions.CreditCardNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
