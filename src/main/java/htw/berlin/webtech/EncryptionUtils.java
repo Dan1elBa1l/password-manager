@@ -9,7 +9,7 @@ public class EncryptionUtils {
 /*
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES/ECB/PKCS5Padding";
-    private static final String KEY = System.getenv("ENCRYPTION_KEY"); // Die Umgebungsvariable für den Schlüssel
+    private static final String KEY = System.getenv("ENCRYPTION_KEY");
 
     private static Key getSecretKey() throws Exception {
         byte[] decodedKey = Base64.getDecoder().decode(KEY);
@@ -31,6 +31,5 @@ public class EncryptionUtils {
         byte[] decryptedBytes = Base64.getDecoder().decode(dataToDecrypt);
         return new String(cipher.doFinal(decryptedBytes));
     }
-
  */
 }
