@@ -1,7 +1,5 @@
 package htw.berlin.webtech.CreditCard;
 
-import htw.berlin.webtech.CreditCard.CreditCard;
-import htw.berlin.webtech.CreditCard.CreditCardRepository;
 import htw.berlin.webtech.Exceptions.CreditCardNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,12 +21,14 @@ public class CreditCardService {
     public List<CreditCard> findAll() {
         Iterable<CreditCard> iterable = creditCardRepository.findAll();
         List<CreditCard> list = new ArrayList<>();
-        iterable.forEach(list::add);
+        iterable.forEach(creditCard -> {
+            System.out.println("CreditCard ID: " + creditCard.getId()); // Logging der ID
+            list.add(creditCard);
+        });
         return list;
     }
 
     public CreditCard save(CreditCard creditCard) {
-        // Hier können Sie Ihre Logik für die Kreditkartenverarbeitung hinzufügen
         return creditCardRepository.save(creditCard);
     }
 

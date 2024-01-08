@@ -34,6 +34,10 @@ public class CreditCard {
         this.description = description;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
