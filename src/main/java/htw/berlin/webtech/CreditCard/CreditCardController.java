@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/creditcards") // Verwenden Sie den richtigen Pfad
+@RequestMapping("/api/creditcards")
 public class CreditCardController {
 
     private final CreditCardService creditCardService;
